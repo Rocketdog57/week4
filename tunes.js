@@ -1,13 +1,12 @@
 function songSelected() {
 	var songChoice =
-  document.getElementbyID("yourSong").value;
+  document.getElementById("yourSong").value;
 	var artistChoice =
-  document.getElementbyID("yourArtist").value;
+  document.getElementById("yourArtist").value;
 	var genreChoice =
-   document.getElementbyID("yourArtist").value;  
-}
+   document.getElementById("yourGenre").value;  
 
-if (songChoice== null || songChoice == "") {
+if (songChoice == null || songChoice == "") {
 	alert("fill out song"); 
 	document.getElementById("yourSong").style.border = "solid 1px red";
   } else if (artistChoice == null || artistChoice == "") {
@@ -17,16 +16,12 @@ if (songChoice== null || songChoice == "") {
 	alert("fill out Genre");   
     document.getElementById("userSide").style.border = "solid 1px red";
   } else {   
-	document.getElementById("Song").innerHTML = yourSong;  
-	document.getElementById("Artist").innerHTML = yourArtist; 
-	document.getElementById("genre").innerHTML = yourgenre; 
+	document.getElementById("Song").innerHTML = songChoice;  
+	document.getElementById("Artist").innerHTML = artistChoice; 
+	document.getElementById("Genre").innerHTML = genreChoice; 
 	document.getElementById("yourSong").style.border = "solid 1px green"; 
 	document.getElementById("yourArtist").style.border = "solid 1px green"; 
-	document.getElementById("yourDrink").style.border = "solid 1px green";
-  
+	}
 }
 
-songSelected()
-
-
-
+songSelected();
